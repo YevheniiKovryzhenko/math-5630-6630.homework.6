@@ -1,3 +1,5 @@
+close all; clear all; clc
+
 hw06_worker = hw06();
 
 disp('Test p1, option 1')
@@ -63,6 +65,8 @@ hw_assert(abs ( hw06_worker.p3(@f8_test,0, 1, 4, 3) - pi/4) < tol);
 
 disp('Test p4, option 3')
 hw_assert( test_p4(hw06_worker.p4()) );
+
+% hw06_worker.test_p5();
 
 function ret = f1_test(x)
     ret = x.^2;
